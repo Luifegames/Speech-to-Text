@@ -32,32 +32,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body onload="showText()">
-    <div
-      class="text"
-      id="text-container"
-      style="text-shadow: 10px 10px 17px black; font-size: 5rem">S</div>
-    <div>
-      <label
-        for=""
-        class="text"
-        style="font-size: 20px; text-shadow: 4px 4px 7px black;"
-        >Language:</label
-      >
+    <div class="title" id="text-container">S</div>
+    <div class="select">
+      <label for="" class="text" style="font-size: 15px">Language</label>
       <select id="selector">
-        <option value="es-ES">ES</option>
-        <option value="en-En">EN</option>
+        <option value="en-EN">EN</option>
+        <option value="es-ES">es</option>
       </select>
     </div>
-    <div class="rect" id="transcript"></div>
-
+    <div class="text" id="transcript"></div>
     <button id="startButton" onclick="start()">Start now!</button>
-
     <footer>
-      <spam
-        class="text"
-        style="font-size: 20px; color: white; text-shadow: 4px 4px 7px black"
-        >&copy; 2023 - Luife</spam
-      >
+      <spam>&copy; 2023 - Luife</spam>
     </footer>
   </body>
 </html>

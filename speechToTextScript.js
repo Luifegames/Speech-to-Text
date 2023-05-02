@@ -3,12 +3,25 @@ recognition.continuous = true;
 recognition.interimResults = true; 
 
 function start() {
-  recognition.lang = document.getElementById("selector").value; 
-  recognition.start(); 
-  document.getElementById("startButton").innerHTML = 'Listening...';
-};
-recognition.onresult = function(event) {
+  if (!navigator.onLine) {
+    alert("Error! Verifica tu conexion");
+    return
+  }
+  if (document.getElementById("startButton").innerHTML != 'Stop...'){
+    
+    recognition.start(); 
+    document.getElementById("startButton").innerHTML = 'Stop...';
+  }else{
+    recognition.stop(); 
+    document.getElementById("startButton").innerHTML = 'Start now!';
+  }
   
+};
+
+
+
+recognition.onresult = function(event) {
+  recognition.lang = document.getElementById("selector").value; 
   const transcript = document.getElementById("transcript");
   var interimTranscript = "";
   var finalTranscript = "";
@@ -20,6 +33,4 @@ recognition.onresult = function(event) {
     }
   }
   transcript.innerHTML = finalTranscript; 
-  document.getElementById("startButton").innerHTML = 'Start now!';
-  recognition.stop();
 };
