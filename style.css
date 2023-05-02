@@ -1,7 +1,9 @@
 body{
     background: linear-gradient(45deg,
         blueviolet,rgb(179, 34, 135));
-     display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
     flex-direction: column;
     gap: 50px;
     align-items: center;
@@ -75,6 +77,9 @@ button::before{
 .text{
     color: #FFF;
     font-size: 124px;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
     font-family: 'Arial Rounded MT Bold',sans-serif ;
     font-weight: bold;
     position: relative;
