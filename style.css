@@ -131,7 +131,6 @@ button::before {
 footer{
     position: fixed;
     bottom: 0;
-    width: 100%;
     color: #FFF;
     font-family: 'Arial Rounded MT Bold',
     sans-serif;
